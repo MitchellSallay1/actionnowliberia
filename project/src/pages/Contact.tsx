@@ -49,17 +49,15 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
-                  <p className="text-gray-700">contact@actionnow.org</p>
+                  <p className="text-gray-700">Ansonysieh@gmail.com</p>
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="p-2 bg-primary-50 rounded-lg mr-4">
-                  <Phone className="w-6 h-6 text-primary-600" />
-                </div>
+              <div className="flex items-start space-x-3">
+                <Phone className="w-6 h-6 text-primary-600" />
                 <div>
                   <h3 className="font-bold mb-1">Phone</h3>
-                  <p className="text-gray-700">(123) 456-7890</p>
+                  <p className="text-gray-700">+231881697769</p>
                 </div>
               </div>
               
@@ -70,9 +68,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold mb-1">Address</h3>
                   <p className="text-gray-700">
-                    123 Change Avenue<br />
-                    Suite 456<br />
-                    Actionville, XX 12345
+                    Sophie Junction<br />
+                    Congo Town<br />
+                    Monrovia, Liberia
                   </p>
                 </div>
               </div>
@@ -273,7 +271,7 @@ const Contact = () => {
               <MapPin className="w-12 h-12 text-primary-600 mx-auto mb-4" />
               <p className="text-gray-700">
                 Map Embed Placeholder<br />
-                123 Change Avenue, Actionville, XX 12345
+                Sophie Junction, Congo Town, Monrovia, Liberia
               </p>
             </div>
           </div>
