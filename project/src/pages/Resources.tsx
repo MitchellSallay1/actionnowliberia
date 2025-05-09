@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
-import { BookOpen, FileText, Video, Download, BookIcon, Link as LinkIcon } from 'lucide-react';
+import { BookOpen, FileText, Video, Download, BookIcon, Link as LinkIcon, Users, Heart, Globe } from 'lucide-react';
 
 const Resources = () => {
   return (
@@ -13,12 +13,13 @@ const Resources = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-primary-700 text-white">
-        <div className="container-custom">
+      <section className="pt-32 pb-20 bg-primary-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/african-pattern.png')] opacity-10"></div>
+        <div className="container-custom relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6">Resources</h1>
+            <h1 className="mb-6 text-4xl md:text-5xl font-bold">African Resources & Knowledge Hub</h1>
             <p className="text-xl text-primary-100">
-              Access tools, guides, and information to support your advocacy and community work.
+              Access tools, guides, and information rooted in African wisdom and traditions to support community development and social change.
             </p>
           </div>
         </div>
@@ -28,7 +29,7 @@ const Resources = () => {
       <Section bgColor="bg-white">
         <h2 className="section-title">Resource Library</h2>
         <p className="section-subtitle">
-          Browse our collection of resources to help you learn, advocate, and take action.
+          Explore our collection of African-focused resources that blend traditional wisdom with modern approaches to create positive change.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -36,11 +37,11 @@ const Resources = () => {
           <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="p-4 bg-primary-600 text-white flex items-center">
               <BookOpen className="w-6 h-6 mr-3" />
-              <h3 className="text-xl font-bold">Educational Materials</h3>
+              <h3 className="text-xl font-bold">African Development Guides</h3>
             </div>
             <div className="p-6">
               <p className="text-gray-700 mb-6">
-                Access fact sheets, guides, and research reports on key issues related to our mission and programs.
+                Access comprehensive guides that integrate traditional African knowledge with sustainable development practices.
               </p>
               <Button variant="outline" to="#educational-materials">
                 View Resources
@@ -52,11 +53,11 @@ const Resources = () => {
           <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="p-4 bg-secondary-600 text-white flex items-center">
               <FileText className="w-6 h-6 mr-3" />
-              <h3 className="text-xl font-bold">Advocacy Toolkits</h3>
+              <h3 className="text-xl font-bold">African Advocacy Tools</h3>
             </div>
             <div className="p-6">
               <p className="text-gray-700 mb-6">
-                Find resources to help you advocate for change, from communication templates to strategy guides.
+                Find culturally-relevant resources that honor African traditions while promoting community organizing and policy advocacy.
               </p>
               <Button variant="outline" to="#advocacy-toolkits">
                 View Resources
@@ -68,11 +69,11 @@ const Resources = () => {
           <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="p-4 bg-accent-500 text-white flex items-center">
               <Video className="w-6 h-6 mr-3" />
-              <h3 className="text-xl font-bold">Multimedia Resources</h3>
+              <h3 className="text-xl font-bold">African Success Stories</h3>
             </div>
             <div className="p-6">
               <p className="text-gray-700 mb-6">
-                Watch videos, listen to podcasts, and view presentations related to our work and mission.
+                Watch inspiring stories of how communities are combining traditional wisdom with modern approaches to create change.
               </p>
               <Button variant="outline" to="#multimedia-resources">
                 View Resources
@@ -87,10 +88,10 @@ const Resources = () => {
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-6 flex items-center">
             <BookOpen className="w-8 h-8 text-primary-600 mr-3" />
-            Educational Materials
+            African Development Guides
           </h2>
           <p className="text-gray-700 mb-8">
-            These resources provide information and insight on key issues related to our mission. Use them to deepen your understanding and share knowledge with others.
+            These resources provide insights and practical guidance that honor African traditions while addressing modern challenges.
           </p>
         </div>
 
@@ -99,64 +100,12 @@ const Resources = () => {
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <div className="flex items-start">
               <div className="p-2 bg-primary-50 rounded-lg mr-4">
-                <FileText className="w-6 h-6 text-primary-600" />
+                <Users className="w-6 h-6 text-primary-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Climate Action Guide</h3>
+                <h3 className="text-xl font-bold mb-2">Ubuntu Leadership in Africa</h3>
                 <p className="text-gray-700 mb-4">
-                  A comprehensive guide to understanding climate change and taking effective action at individual and community levels.
-                </p>
-                <div className="flex items-center text-sm text-gray-500 mb-4">
-                  <BookIcon className="w-4 h-4 mr-1" />
-                  <span>20 pages</span>
-                  <span className="mx-2">•</span>
-                  <Download className="w-4 h-4 mr-1" />
-                  <span>PDF</span>
-                </div>
-                <Button variant="outline" className="text-sm">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Resource
-                </Button>
-              </div>
-            </div>
-          </div>
-          
-          {/* Resource 2 */}
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-            <div className="flex items-start">
-              <div className="p-2 bg-primary-50 rounded-lg mr-4">
-                <FileText className="w-6 h-6 text-primary-600" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Social Justice Primer</h3>
-                <p className="text-gray-700 mb-4">
-                  An introduction to key concepts and issues in social justice, with a focus on equity, inclusion, and systemic change.
-                </p>
-                <div className="flex items-center text-sm text-gray-500 mb-4">
-                  <BookIcon className="w-4 h-4 mr-1" />
-                  <span>15 pages</span>
-                  <span className="mx-2">•</span>
-                  <Download className="w-4 h-4 mr-1" />
-                  <span>PDF</span>
-                </div>
-                <Button variant="outline" className="text-sm">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Resource
-                </Button>
-              </div>
-            </div>
-          </div>
-          
-          {/* Resource 3 */}
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-            <div className="flex items-start">
-              <div className="p-2 bg-primary-50 rounded-lg mr-4">
-                <FileText className="w-6 h-6 text-primary-600" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Community Resilience Handbook</h3>
-                <p className="text-gray-700 mb-4">
-                  Strategies and case studies on building strong, resilient communities that can adapt to challenges and support all members.
+                  A comprehensive guide to traditional African leadership principles and their application in modern community development.
                 </p>
                 <div className="flex items-center text-sm text-gray-500 mb-4">
                   <BookIcon className="w-4 h-4 mr-1" />
@@ -173,20 +122,72 @@ const Resources = () => {
             </div>
           </div>
           
+          {/* Resource 2 */}
+          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+            <div className="flex items-start">
+              <div className="p-2 bg-primary-50 rounded-lg mr-4">
+                <Heart className="w-6 h-6 text-primary-600" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Youth Empowerment in Liberia</h3>
+                <p className="text-gray-700 mb-4">
+                  Strategies that combine traditional mentorship with modern approaches to engage and empower young people.
+                </p>
+                <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <BookIcon className="w-4 h-4 mr-1" />
+                  <span>20 pages</span>
+                  <span className="mx-2">•</span>
+                  <Download className="w-4 h-4 mr-1" />
+                  <span>PDF</span>
+                </div>
+                <Button variant="outline" className="text-sm">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resource
+                </Button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Resource 3 */}
+          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+            <div className="flex items-start">
+              <div className="p-2 bg-primary-50 rounded-lg mr-4">
+                <Globe className="w-6 h-6 text-primary-600" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Sustainable Development in West Africa</h3>
+                <p className="text-gray-700 mb-4">
+                  Case studies of communities integrating traditional ecological knowledge with modern sustainability practices.
+                </p>
+                <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <BookIcon className="w-4 h-4 mr-1" />
+                  <span>30 pages</span>
+                  <span className="mx-2">•</span>
+                  <Download className="w-4 h-4 mr-1" />
+                  <span>PDF</span>
+                </div>
+                <Button variant="outline" className="text-sm">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resource
+                </Button>
+              </div>
+            </div>
+          </div>
+          
           {/* Resource 4 */}
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <div className="flex items-start">
               <div className="p-2 bg-primary-50 rounded-lg mr-4">
-                <FileText className="w-6 h-6 text-primary-600" />
+                <BookOpen className="w-6 h-6 text-primary-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Sustainable Living Guide</h3>
+                <h3 className="text-xl font-bold mb-2">Traditional Knowledge Systems</h3>
                 <p className="text-gray-700 mb-4">
-                  Practical tips and resources for reducing your environmental footprint and living more sustainably.
+                  Exploring and preserving traditional African knowledge systems for modern community development.
                 </p>
                 <div className="flex items-center text-sm text-gray-500 mb-4">
                   <BookIcon className="w-4 h-4 mr-1" />
-                  <span>18 pages</span>
+                  <span>22 pages</span>
                   <span className="mx-2">•</span>
                   <Download className="w-4 h-4 mr-1" />
                   <span>PDF</span>
@@ -206,10 +207,10 @@ const Resources = () => {
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-6 flex items-center">
             <FileText className="w-8 h-8 text-secondary-600 mr-3" />
-            Advocacy Toolkits
+            African Advocacy Toolkits
           </h2>
           <p className="text-gray-700 mb-8">
-            These resources provide practical tools and guidance for effective advocacy. Use them to plan campaigns, communicate your message, and create change.
+            Practical tools and guidance that respect African cultural contexts while promoting effective advocacy and community organizing.
           </p>
         </div>
 
@@ -218,16 +219,16 @@ const Resources = () => {
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <div className="flex items-start">
               <div className="p-2 bg-secondary-50 rounded-lg mr-4">
-                <FileText className="w-6 h-6 text-secondary-600" />
+                <Users className="w-6 h-6 text-secondary-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Community Organizing Toolkit</h3>
+                <h3 className="text-xl font-bold mb-2">Community Mobilization in Liberia</h3>
                 <p className="text-gray-700 mb-4">
-                  A step-by-step guide to organizing your community around shared goals and creating grassroots movements for change.
+                  A culturally-sensitive guide to organizing communities and creating grassroots movements for change in Liberia.
                 </p>
                 <div className="flex items-center text-sm text-gray-500 mb-4">
                   <BookIcon className="w-4 h-4 mr-1" />
-                  <span>30 pages</span>
+                  <span>28 pages</span>
                   <span className="mx-2">•</span>
                   <Download className="w-4 h-4 mr-1" />
                   <span>PDF + Worksheets</span>
@@ -247,13 +248,13 @@ const Resources = () => {
                 <FileText className="w-6 h-6 text-secondary-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Policy Engagement Guide</h3>
+                <h3 className="text-xl font-bold mb-2">Policy Advocacy in West Africa</h3>
                 <p className="text-gray-700 mb-4">
-                  Tools and strategies for engaging with policymakers and advocating for policy change at local, state, and national levels.
+                  Tools and strategies for engaging with policymakers while respecting traditional governance structures.
                 </p>
                 <div className="flex items-center text-sm text-gray-500 mb-4">
                   <BookIcon className="w-4 h-4 mr-1" />
-                  <span>22 pages</span>
+                  <span>25 pages</span>
                   <span className="mx-2">•</span>
                   <Download className="w-4 h-4 mr-1" />
                   <span>PDF + Templates</span>
@@ -270,16 +271,16 @@ const Resources = () => {
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <div className="flex items-start">
               <div className="p-2 bg-secondary-50 rounded-lg mr-4">
-                <FileText className="w-6 h-6 text-secondary-600" />
+                <Globe className="w-6 h-6 text-secondary-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Digital Advocacy Toolkit</h3>
+                <h3 className="text-xl font-bold mb-2">Digital Advocacy in Africa</h3>
                 <p className="text-gray-700 mb-4">
-                  Strategies and tools for effective online advocacy, including social media campaigns, digital storytelling, and online organizing.
+                  Strategies for effective online advocacy that bridge traditional communication methods with digital platforms.
                 </p>
                 <div className="flex items-center text-sm text-gray-500 mb-4">
                   <BookIcon className="w-4 h-4 mr-1" />
-                  <span>28 pages</span>
+                  <span>20 pages</span>
                   <span className="mx-2">•</span>
                   <Download className="w-4 h-4 mr-1" />
                   <span>PDF + Social Media Templates</span>
@@ -296,16 +297,16 @@ const Resources = () => {
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <div className="flex items-start">
               <div className="p-2 bg-secondary-50 rounded-lg mr-4">
-                <FileText className="w-6 h-6 text-secondary-600" />
+                <Heart className="w-6 h-6 text-secondary-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Campaign Planning Workbook</h3>
+                <h3 className="text-xl font-bold mb-2">Youth Leadership Development</h3>
                 <p className="text-gray-700 mb-4">
-                  A comprehensive workbook for planning and executing effective advocacy campaigns, from setting goals to measuring impact.
+                  A comprehensive guide that combines traditional mentorship with modern leadership development approaches.
                 </p>
                 <div className="flex items-center text-sm text-gray-500 mb-4">
                   <BookIcon className="w-4 h-4 mr-1" />
-                  <span>35 pages</span>
+                  <span>32 pages</span>
                   <span className="mx-2">•</span>
                   <Download className="w-4 h-4 mr-1" />
                   <span>PDF + Worksheets</span>
@@ -325,10 +326,10 @@ const Resources = () => {
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-6 flex items-center">
             <Video className="w-8 h-8 text-accent-500 mr-3" />
-            Multimedia Resources
+            African Success Stories
           </h2>
           <p className="text-gray-700 mb-8">
-            These resources provide information and inspiration in video, audio, and visual formats. Use them for learning, sharing, and inspiring others.
+            Watch inspiring stories of how communities are combining traditional wisdom with modern approaches to create positive change.
           </p>
         </div>
 
@@ -337,8 +338,8 @@ const Resources = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <div className="aspect-w-16 aspect-h-9 bg-gray-300">
               <img 
-                src="https://images.pexels.com/photos/7148384/pexels-photo-7148384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Webinar preview" 
+                src="/images/african-community.jpg" 
+                alt="Community workshop in Liberia" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -350,19 +351,19 @@ const Resources = () => {
               </div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Webinar: Effective Community Organizing</h3>
+              <h3 className="text-xl font-bold mb-2">Youth Empowerment in Monrovia</h3>
               <p className="text-gray-700 mb-4">
-                Learn strategies and best practices for organizing your community around shared goals and creating collective impact.
+                Watch how young leaders in Monrovia are combining traditional wisdom with modern approaches to create positive change.
               </p>
               <div className="flex items-center text-sm text-gray-500 mb-4">
                 <Video className="w-4 h-4 mr-1" />
-                <span>60 minutes</span>
+                <span>45 minutes</span>
                 <span className="mx-2">•</span>
                 <LinkIcon className="w-4 h-4 mr-1" />
                 <span>Video</span>
               </div>
               <Button variant="outline" className="text-sm">
-                Watch Webinar
+                Watch Story
               </Button>
             </div>
           </div>
@@ -371,8 +372,8 @@ const Resources = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <div className="aspect-w-16 aspect-h-9 bg-gray-300">
               <img 
-                src="https://images.pexels.com/photos/6953871/pexels-photo-6953871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Podcast preview" 
+                src="/images/african-education.jpg" 
+                alt="Education program in Liberia" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
@@ -384,19 +385,19 @@ const Resources = () => {
               </div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Podcast: Voices of Change</h3>
+              <h3 className="text-xl font-bold mb-2">Voices of Change: African Perspectives</h3>
               <p className="text-gray-700 mb-4">
-                A monthly podcast featuring interviews with changemakers and discussions about key social and environmental issues.
+                Listen to inspiring stories from community leaders and activists who are bridging traditional and modern approaches.
               </p>
               <div className="flex items-center text-sm text-gray-500 mb-4">
                 <BookIcon className="w-4 h-4 mr-1" />
-                <span>12 episodes</span>
+                <span>8 episodes</span>
                 <span className="mx-2">•</span>
                 <LinkIcon className="w-4 h-4 mr-1" />
                 <span>Audio</span>
               </div>
               <Button variant="outline" className="text-sm">
-                Listen to Podcast
+                Listen to Stories
               </Button>
             </div>
           </div>
@@ -405,23 +406,23 @@ const Resources = () => {
 
       {/* Success Stories */}
       <Section bgColor="bg-white">
-        <h2 className="section-title">Success Stories</h2>
+        <h2 className="section-title">African Success Stories</h2>
         <p className="section-subtitle">
-          Read about how individuals and communities have used our resources to create change.
+          Read about how communities across Africa are combining traditional wisdom with modern approaches to create positive change.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Story 1 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <img 
-              src="https://images.pexels.com/photos/3823542/pexels-photo-3823542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="Community garden project" 
+              src="/images/liberia-community.jpg" 
+              alt="Community project in Liberia" 
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">From Vacant Lot to Community Garden</h3>
+              <h3 className="text-xl font-bold mb-2">Youth-Led Community Development</h3>
               <p className="text-gray-700 mb-4">
-                How residents in Springfield used our Community Organizing Toolkit to transform an abandoned space into a thriving garden.
+                How young leaders in Monrovia are combining traditional wisdom with modern approaches to transform their community.
               </p>
               <Button variant="outline" className="text-sm">
                 Read Story
@@ -432,14 +433,14 @@ const Resources = () => {
           {/* Story 2 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <img 
-              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="Community meeting" 
+              src="/images/african-education.jpg" 
+              alt="Education initiative" 
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Youth-Led Climate Action</h3>
+              <h3 className="text-xl font-bold mb-2">Education for All in Liberia</h3>
               <p className="text-gray-700 mb-4">
-                How high school students used our Climate Action Guide to advocate for renewable energy in their school district.
+                A community's journey to integrate traditional learning methods with modern education approaches.
               </p>
               <Button variant="outline" className="text-sm">
                 Read Story
@@ -450,14 +451,14 @@ const Resources = () => {
           {/* Story 3 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
             <img 
-              src="https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="City hall" 
+              src="/images/african-women.jpg" 
+              alt="Women's empowerment" 
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Policy Change for Affordable Housing</h3>
+              <h3 className="text-xl font-bold mb-2">Women's Leadership Initiative</h3>
               <p className="text-gray-700 mb-4">
-                How advocates used our Policy Engagement Guide to successfully campaign for affordable housing legislation.
+                How women leaders are combining traditional wisdom with modern approaches to drive social change.
               </p>
               <Button variant="outline" className="text-sm">
                 Read Story
