@@ -6,6 +6,9 @@ import Programs from '../components/home/Programs';
 import GetInvolved from '../components/home/GetInvolved';
 import Stats from '../components/home/Stats';
 import CTA from '../components/home/CTA';
+import PhotoGallery from '../components/home/PhotoGallery';
+import Testimonials from '../components/home/Testimonials';
+import Newsletter from '../components/home/Newsletter';
 
 const Home = () => {
   return (
@@ -19,8 +22,11 @@ const Home = () => {
       <Mission />
       <Programs />
       <Stats />
+      <PhotoGallery />
       <GetInvolved />
       <CTA />
+      <Testimonials />
+      <Newsletter />
     </motion.div>
   );
 };
